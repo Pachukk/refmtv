@@ -557,7 +557,7 @@ try:
         raise KeyError
 except KeyError:
     log_warning("CHANNEL_USERNAME not provided! Using default @DevilMirrors")
-    CHANNEL_USERNAME = "@dipeshmirror"
+    CHANNEL_USERNAME = "@vava_tg"
 try:
     FSUB_CHANNEL_ID = int(getConfig("FSUB_CHANNEL_ID"))
 except KeyError:
@@ -651,27 +651,27 @@ except:
 try:
     AUTHOR_NAME = getConfig('AUTHOR_NAME')
     if len(AUTHOR_NAME) == 0:
-        AUTHOR_NAME = 'Dipesh'
+        AUTHOR_NAME = 'Steve'
 except KeyError:
-    AUTHOR_NAME = 'Dipesh'
+    AUTHOR_NAME = 'Steve'
 try:
     AUTHOR_URL = getConfig('AUTHOR_URL')
     if len(AUTHOR_URL) == 0:
-        AUTHOR_URL = 'https://t.me/dipeshmirror'
+        AUTHOR_URL = 'https://t.me/EnthadaNokunne'
 except KeyError:
-    AUTHOR_URL = 'https://t.me/dipeshmirror'
+    AUTHOR_URL = 'https://t.me/EnthadaNokunne'
 try:
     GD_INFO = getConfig('GD_INFO')
     if len(GD_INFO) == 0:
-        GD_INFO = 'Uploaded by Reflection Mirror Bot'
+        GD_INFO = 'Mirror Bot'
 except KeyError:
-    GD_INFO = 'Uploaded by Reflection Mirror Bot'
+    GD_INFO = 'Mirror Bot'
 try:
     TITLE_NAME = getConfig('TITLE_NAME')
     if len(TITLE_NAME) == 0:
-        TITLE_NAME = 'Reflection-Mirror-Search'
+        TITLE_NAME = 'Mirror-Search'
 except KeyError:
-    TITLE_NAME = 'Reflection-Mirror-Search'
+    TITLE_NAME = 'Mirror-Search'
 try:
     FINISHED_PROGRESS_STR = getConfig('FINISHED_PROGRESS_STR') 
     UN_FINISHED_PROGRESS_STR = getConfig('UN_FINISHED_PROGRESS_STR')
