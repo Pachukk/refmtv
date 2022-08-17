@@ -75,17 +75,17 @@ class TgUploader:
             up_path = new_path
         else:
             up_path = up_path
-            cap_mono = f"<code>{file_}</code>"
+            cap_mono = f"<b><i>{file_}</i></b><b>\n\n@T4TVSeries    | @P4PSa\nT4TVSeries ™  |  P4PSa  ™ </b>"
             pm_cap = f"<b>{file_}</b>"
         if CUSTOM_FILENAME is not None:
-            cap_mono = f"{CUSTOM_FILENAME} <code>{file_}</code>"
+            cap_mono = f"{CUSTOM_FILENAME} <b><i>{file_}</i></b><b>\n\n@T4TVSeries    | @P4PSa\nT4TVSeries ™  |  P4PSa  ™ </b>"
             file_ = f"{CUSTOM_FILENAME} {file_}"
             new_path = ospath.join(dirpath, file_)
             osrename(up_path, new_path)
             up_path = new_path
         else:
 
-            cap_mono = f"<code>{file_}</code>"
+            cap_mono = f"<b><i>{file_}</i></b><b>\n\n@T4TVSeries    | @P4PSa\nT4TVSeries ™  |  P4PSa  ™ </b>"
             pm_cap = f"<b>{file_}</b>"
         notMedia = False
         thumb = self.__thumb
