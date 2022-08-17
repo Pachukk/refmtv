@@ -557,7 +557,7 @@ try:
         raise KeyError
 except KeyError:
     log_warning("CHANNEL_USERNAME not provided! Using default @DevilMirrors")
-    CHANNEL_USERNAME = "@vava_tg"
+    CHANNEL_USERNAME = "vava_tg"
 try:
     FSUB_CHANNEL_ID = int(getConfig("FSUB_CHANNEL_ID")) 
 except KeyError:
