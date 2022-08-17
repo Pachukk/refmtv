@@ -559,7 +559,7 @@ except KeyError:
     log_warning("CHANNEL_USERNAME not provided! Using default @DevilMirrors")
     CHANNEL_USERNAME = "@vava_tg"
 try:
-    FSUB_CHANNEL_ID = int(getConfig("FSUB_CHANNEL_ID"))
+    FSUB_CHANNEL_ID = int(getConfig("FSUB_CHANNEL_ID")
 except KeyError:
     log_warning("CHANNEL_USERNAME not provided! Using default id of @DevilMirrors")
     FSUB_CHANNEL_ID = "-1001577416484"
@@ -779,7 +779,7 @@ except:
 try:
     IMAGE_URL = getConfig('IMAGE_URL')
 except KeyError:
-    IMAGE_URL = 'http://telegra.ph/REFLECTION-07-18'
+    IMAGE_URL = 'https://telegra.ph/file/ee82ed97c6cf5e7dc8bd0.jpg'
 
 updater = tgUpdater(token=BOT_TOKEN, request_kwargs={'read_timeout': 20, 'connect_timeout': 15})
 bot = updater.bot
