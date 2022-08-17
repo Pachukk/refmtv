@@ -559,10 +559,13 @@ except KeyError:
     log_warning("CHANNEL_USERNAME not provided! Using default @DevilMirrors")
     CHANNEL_USERNAME = "vava_tg"
 try:
-    FSUB_CHANNEL_ID = int(getConfig("FSUB_CHANNEL_ID")) 
+    FSUB_CHANNEL_ID = getConfig("FSUB_CHANNEL_ID")
+    if len(FSUB_CHANNEL_ID) == 0:
+        raise KeyError
+    FSUB_CHANNEL_ID = int(FSUB_CHANNEL_ID)
 except KeyError:
-    log_warning("CHANNEL_USERNAME not provided! Using default id of @DevilMirrors")
-    FSUB_CHANNEL_ID = "-1001577416484"
+    log_info("CHANNEL_ID not provided! Using default id of @Z_Mirror")
+    FSUB_CHANNEL_ID = -1001232292892
 try:
     ANILIST_ENABLED = getConfig("ANILIST_ENABLED")
     ANILIST_ENABLED = ANILIST_ENABLED.lower() == "true"
