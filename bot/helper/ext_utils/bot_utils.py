@@ -450,14 +450,13 @@ def bot_sys_stats():
     sent = get_readable_file_size(psutil.net_io_counters().bytes_sent)
     cpuUsage = cpu_percent(interval=1)
     return f"""
-{TITLE_NAME} BOT STATS
+BOT STATS
 CPU:  {progress_bar(cpuUsage)} {cpuUsage}%
 RAM: {progress_bar(mem_p)} {mem_p}%
 DISK: {progress_bar(disk)} {disk}%
 T: {disk_t}GB | F: {disk_f}GB
 Working For: {currentTime}
 T-DL: {recv} | T-UL: {sent}
-Made with ❤️ by Dipesh
 """
 
 
