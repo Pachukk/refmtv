@@ -85,9 +85,7 @@ def getHerokuDetails(h_api_key, h_app_name):
                     pass
         LOGGER.info(f"This App: {str(app.name)}")
         abc += f"<b>├ 🎃 APP USAGE:</b> {get_readable_time(AppQuotaUsed)}\n"
-        abc += f"<b>├ 🗑️ OTHER APP:</b> {get_readable_time(OtherAppsUsage)}\n"
-        abc += f'<b>│</b>\n'
-        abc += f'<b>╰─《 ☣️ @dipeshmirror ☣️ 》</b>'
+        abc += f"<b>╰─ 🗑️ OTHER APP:</b> {get_readable_time(OtherAppsUsage)}\n"
         return abc
     except Exception as g:
         LOGGER.error(g)
@@ -95,7 +93,7 @@ def getHerokuDetails(h_api_key, h_app_name):
 
 
 
-IMAGE_X = "https://telegra.ph/file/9c2c7250397f4ed2eed20.jpg"
+IMAGE_X = "https://telegra.ph/file/ee82ed97c6cf5e7dc8bd0.jpg"
 
 now=datetime.now(pytz.timezone(f'{TIMEZONE}'))
 
@@ -171,9 +169,7 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("😎 Master", "https://t.me/toxytech")
-    buttons.buildbutton("🙋 Mirror Group", "https://t.me/dipeshmirror")
-    buttons.buildbutton("🇮🇳 Support Group", "https://t.me/mirrorsociety")
+    buttons.buildbutton("😎 Master", "tg://settings/")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f"""
@@ -183,7 +179,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
         sendMarkup(
-            "Not Authorized user, deploy your own mirror-leech bot",
+            "Not Authorized user",
             context.bot,
             update.message,
             reply_markup,
@@ -329,7 +325,7 @@ help_string_telegraph_user = f'''
 '''
 
 help_user = telegraph.create_page(
-    title='😄 ReflecrionMirror Help 😄',
+    title='😄 Mirror Help 😄',
     content=help_string_telegraph_user)["path"]
 
 help_string_telegraph_admin = f'''
@@ -353,7 +349,7 @@ help_string_telegraph_admin = f'''
 '''
 
 help_admin = telegraph.create_page(
-    title='😄 Reflection-Mirror Help',
+    title='😄 Mirror Help',
     content=help_string_telegraph_admin)["path"]
 
 def bot_help(update, context):
